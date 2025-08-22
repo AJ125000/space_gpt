@@ -15,6 +15,7 @@ class Settings(BaseSettings):
     qdrant_url: str
     qdrant_api_key: str
     langchain_tracing_v2: bool = True
+    serper_api_key: str
     
     # --- Local Storage Paths (for non-vector data) ---
     # The summary index is stored locally as it's not part of the vector DB.
