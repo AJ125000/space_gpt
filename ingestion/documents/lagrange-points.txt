@@ -1,0 +1,36 @@
+Lagrange points
+Before we explore Lagrange points, it's important to familiarise ourselves with the Three Body Problem and its solutions. The Three-Body Problem concerns the motion of three bodies in space and lacks a general analytical expression. However, specific solutions exist for certain scenarios. Two critical solutions to be aware of are:
+1. Euler's Solution
+: This solution is applicable when all three bodies are collinear. In this case, careful mathematical analysis allows us to derive expressions for their motion. The bodies move along confocal ellipses, sharing the same eccentricity and period of revolution about the system's center of mass.
+Now lets consider three bodies of masses: m1, m2, and m3 -
+2. Lagrange's Solution
+: This solution is relevant when the three bodies are arranged to form the vertices of an equilateral triangle. It results in each body following an elliptical path with the same eccentricity but oriented at different angles relative to the center of mass. It's worth noting that this solution is stable only when one of the three bodies has significantly greater mass than the other two.
+What are Lagrange points?
+Lagrange points are specific locations in space within a two-body system where, if we place an object with significantly less mass than the two primary bodies, that object will experience a net gravitational force of zero. This means that the gravitational forces acting on the object will perfectly balance, allowing it to remain at rest concerning the two-body system's motion. In simpler terms, these Lagrange points can be considered "parking spots" for positioning objects, such as satellites, so they remain stationary relative to the Earth-Sun system. There are five such Lagrange points. Three of them, denoted as L1, L2, and L3, lie along the line connecting the two primary bodies, as seen in Euler's solution. The remaining two points, L4 and L5, form equilateral triangles with the primary bodies, as described in Lagrange's solution. Lagrange points can be found in various two-body systems, including the Earth-Sun and Earth-Moon systems.
+Finding the location of these points
+L4 and L5 can be found easily by forming an equilateral triangle. Another way to find L4 and L5 is to find a location such that the net force on an object kept there will be zero. For finding L1, L2, and L3, we can consider three cases for objects collinear to the two bodies and solve the maths. Please note that L1, L2, and L3 are unstable positions along the line joining the two bodies.
+Mathematical Way of finding L4 and L5 :
+In the circular restricted three-body problem, we are studying the motion of a small mass in the gravitational field of two larger masses. We choose a rotating frame that revolves with the two larger masses, creating a more convenient reference frame.
+Equations of Motion
+:
+In the rotating frame, the small mass experiences gravitational forces from both larger masses. These forces are adjusted to account for the rotating frame. The equations of motion for the small mass describe how it moves in response to these forces. We include the Coriolis force due to the rotation of the frame.
+Forces:
+1.
+Gravitational Forces
+: The gravitational forces acting on the small mass are calculated based on their distances from the two larger masses. These distances are denoted as r1 and r2.
+2.
+Centrifugal Force
+: In the rotating frame, a centrifugal force acts on the small mass, pulling it away from the center of rotation. This force is proportional to the square of the radial distance from the rotation axis.
+3.
+Coriolis Force
+: Due to the rotation of the frame, a Coriolis force acts perpendicular to the velocity of the small mass. This force is taken into account in the equations of motion.
+Equilibrium Conditions
+:
+For the L4 and L5 Lagrange points, the net force on the small mass is zero. This means that the gravitational forces, Coriolis force, and centrifugal force balance each other, resulting in no net force in the rotating frame.
+Distance Relationships
+:
+The distances r1 and r2 from the small mass to the larger masses are not arbitrary. The mass ratio and the separation distance between the larger masses determine them.
+Solution:
+By solving the equilibrium conditions, taking into account the distance relationships, we can find the coordinates of L4 and L5. These coordinates represent stable points where the gravitational forces, Coriolis force, and centrifugal force create an equilibrium, allowing the small mass to stay in a fixed position relative to the larger masses in the rotating frame.
+The L1 point of the Earth-Sun system has a view of the sun and is currently home to the Solar and Heliospheric Observatory Satellite SOHO. The L2 point of the Earth-Sun system was the home to the WMAP spacecraft, Planck, and the current home of the James Webb Space Telescope.
+L2 is ideal for astronomy. The L3 point remains hidden behind the Sun. The idea of another planet hidden behind the Sun at L3 is a popular topic in science fiction. L4 and L5 offer stable orbits. Objects orbiting L4 and L5 are called Trojans (usually) Asteroids (Sun-Jupiter System).

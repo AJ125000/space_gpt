@@ -1,0 +1,27 @@
+???????
+One of the key differences that the manned Mars missions would have with the manned moon missions is that these would require the presence of adequate infrastructure on the Martian surface for the local production of fuel and oxygen even before humans arrive on the planet. This makes the aspect of ISRU or in-situ resource utilisation of utmost importance.ISRU refers to the practice of collection, processing, storing and use of materials found or manufactured on other astronomical objects (the Moon, Mars, asteroids, etc.) that replace materials that would otherwise be brought from Earth.
+SpaceX, as a part of its pervasive and ambitious project of sending humans to Mars, is expected to send an uncrewed cargo mission to Mars prior to the actual crewed mission. These cargo missions will deliver a massive array of solar panels, mining equipment, surface vehicles and food and life support infrastructure. Following these launches, in the subsequent launch window, two more uncrewed starships are expected to accompany two crewed starships to the red planet to set up a propellant plant, deploy the solar park and landing pads and deploy greenhouses. The timeframes of these ambitious missions are still aspirational and, quite expectedly, subject to a lot of change.
+The proposed propellant plant on Mars will use the Sabatier Process(CO
+2
++ 4H
+2
+? CH
+4
++ 2H
+2
+O) to generate methane and water. The water will then be electrolysed to liberate oxygen which, along with methane, will be used as propellants to return the starships back to Earth. The CO
+2
+can be obtained from the Martian atmosphere, and the hydrogen may be either shipped from Earth, or it can also be produced indigenously from the water obtained from the subsurface Martian water ice extracted by mining.
+For the generation of O
+2
+, SpaceX plans to use Mars Oxygen ISRU Experiment(MOXIE). This technology collects CO
+2
+from the Martian atmosphere and splits the CO
+2
+into CO and O
+2
+using a process called solid oxide electrolysis. A 1% scale model of this technology is installed on NASA's Perseverance Rover for testing purposes. This prototype can generate up to 22g O
+2
+per hour with more than 99.6% purity. The MOXIE plant that SpaceX plans to set up will be used for life support in the Mars colonies as well as for the production of oxygen-based propellant for the Starship.
+Some of the other proposed applications of ISRU, which are crucial in the upcoming Mars missions, include the production of oxygen, hydrogen and CO from Martian haematite deposits and even the production of plastics from the available in-situ resources of the planet itself.
+Mars itself might not be very welcoming to us humans, but with the above-mentioned technologies, we can, at least to a certain extent, make the planet more habitable and hence make future human missions more sustainable. There will be, however, a lot of challenges that will be encountered while implementing all of these ideas.

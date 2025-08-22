@@ -1,0 +1,25 @@
+# --- Core Application & API ---
+# FastAPI and Uvicorn for the web server.
+fastapi==0.111.0
+uvicorn[standard]==0.30.1
+pydantic-settings==2.3.4
+python-dotenv==1.0.1
+
+# --- LangChain & LangGraph ---
+# Core LangChain/LangGraph packages.
+langchain==0.2.14
+langchain-community
+langgraph==0.1.2
+langchain-google-genai==1.0.6
+duckduckgo-search==6.1.8
+
+# --- LlamaIndex & Vector DB ---
+# CORRECTED: All versions are now verified against PyPI.
+llama-index==0.10.59
+llama-index-llms-gemini==0.1.9
+llama-index-embeddings-gemini==0.1.8
+llama-index-vector-stores-qdrant==0.1.6
+qdrant-client==1.9.2
+
+# --- Observability ---
+langsmith==0.1.83

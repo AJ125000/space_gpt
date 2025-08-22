@@ -1,0 +1,44 @@
+???????
+Agnikul Cosmos
+Agnikul Cosmos is a rising startup in India's space sector which was incubated by
+IIT Madras
+. It made a historic leap with the successful launch of its
+Agnibaan-SOrTeD
+rocket on
+May 30, 2024
+at
+7:15 am
+. The recently launched Agnibaan (which means an
+arrow of fire
+) wasn't a fully operational rocket and achieved only sub-orbital flight of around
+8 km
+. It was a
+Suborbital Technological Demonstrator (SOrTeD)
+designed specifically to test the core technologies for the future Agnibaan launch vehicle. Some of the milestones associated with this launch are:
+World's First 3D-Printed Engine:
+Agnibaan is powered by a semi-cryogenic engine (
+Agnilet
+) and is built entirely through 3D printing. This innovative technology reduces manufacturing time and cost.
+India's First Private Launchpad:
+The launch took place from
+Dhanush
+, a mobile launchpad established by Agnikul itself.
+Agnibaan
+Agnibaan is a two-stage, customizable launch vehicle designed to carry a maximum payload of
+100 kg
+to
+700 km
+LEO. The total rocket has a height of 18m and a diameter of 1.3m. Agnikul can configure the rocket with a variable number of engines based on mission requirements and launch location, offering a flexible and adaptable launch solution.
+The first stage of Agnibaan is powered by
+7 Agnite
+engines each delivering
+25kN
+of thrust at sea level. All of these engines are electric pump fed engines. The first stage sports a configurable engine clustering architecture.
+The second stage is powered by an
+Agnite vacuum optimized engine
+which offers a total thrust of
+25kN
+. Agnibaan comes along with an optional baby stage which sits inside the payload fairing. The dimensions of the payload envelope are 2m x 1.5m and has the ability to take one or more satellites.
+This successful launch isn't just a win for Agnikul Cosmos, it's a significant moment for India's space ambitions. It demonstrates the growing prowess of the domestic private sector and places India at the forefront of 3D-printed engine technology for space applications.
+On this significant milestone, Srinath Ravichandran, co-founder and CEO of Agnikul Cosmos stressed importance on the hard work of the team and said, This is the culmination of 1000s of hours of reviews and hard work by the team. We are blessed to have had the opportunity and the full support of IN-SPACe and ISRO to design and build original space worthy hardware in India.
+With Agnibaan's success, Agnikul Cosmos has set its sights on the future. The company aims to develop a series of rockets with increased payload capacities, catering to the growing demand for low-cost satellite launches. This achievement will lead to further innovation and collaboration within India's space industry, positioning the nation as a major player in the global space race.

@@ -1,0 +1,59 @@
+???????
+Double Asteroid Redirection Test: Avenge The Dinosaurs?
+Have you ever wondered what would have happened if the
+Chixilub
+asteroid that made the dinosaurs go extinct hadnt hit the Earth? Dinosaurs would have thrived and evolved bigger brains, while the existence of humans would be questionable. We would have survived but may not prosper and be similar to what we are today. However, the dinosaurs were not a very advanced civilization to practise agriculture, let alone deflect an enormous asteroid.
+Today, humans are testing our abilities as a planetary safeguard, the first step of which was the
+Double Asteroid Redirection Test
+or the DART mission.
+Double Asteroid Redirection Test (DART)
+was a Space Mission aimed at testing a method of planetary defence against near-Earth objects
+(NEOs)
+; the DART mission was launched on November 23, 2021, at 1:20 a.m. EDT atop a SpaceX Falcon 9 rocket from the Space Launch Complex 4 at the Vandenberg Space Force Base in California. The spacecraft aimed at
+Dimorphos
+, a minor moon planet of the asteroid
+Didymos
+, and impacted it 11,000,000 kilometres (29 lunar distances) away from the Earth on 26th September 2022. The collision shortened the orbital period by
+32 minutes
+(A significant success as the predefined threshold was only
+73 seconds
+!). Surprisingly, the substantial change in momentum was due to the recoil of the ejected debris (called ejecta), which was substantially more extensive than that caused by the effect of the impact itself. This is because Dimorphos is a cluster of dust and boulders bound by gravity.
+Why Didymos-Dimorphos System?
+(And other facts)
+Why not a single asteroid? In fact, why target a binary system? The answer is easy: calculations! The change in the rotation period will be better calculated for a small orbit of Dimorphos around Didymos than the heliocentric orbit of a single asteroid.
+We have been tracking the pair for years and have collected enough data to predict its path and motion. This was calculated by calculating the fluctuation in light reflected by the asteroid. The asteroid system was closest to Earth in 2022, and this close approach would not occur for another 40 years. However, DART impacted the asteroid a week before the closest approach as it was at good luminosity then and could be observed from the telescopes in the Earth's Southern Hemisphere.
+The head-on-impact of the 500-kilogram, refrigerator-sized DART spacecraft at 6.6 kilometres per second likely imparted an energy of about 11 gigajoules, the equivalent of about three tonnes of TNT. The impact was a bulls-eye, with the spacecraft hitting Dimorphos. The size of Dimorphos was much smaller than Chixilub, which wiped out dinosaurs from our planet. Still, if Dimorphos had impacted Earth, it would have been six times more potent than the Tsar Bomba (the most powerful nuclear test ever conducted).
+Instruments Aboard
+The DART spacecraft was an impactor with a mass of 610 kg that hosted no scientific payload and had sensors only for navigation. Its instruments included:
+Sun Sensor:
+A navigational
+instrument used by spacecraft to detect the position of the Sun. It is used for attitude control, solar array pointing, gyro updating, and fail-safe recovery.
+Star Trackers
+:
+As astronomers have measured the positions of many stars accurately, a star tracker on a spacecraft may be used to determine the spacecraft's orientation to the stars.
+DRACO:
+Didymos Reconnaissance and Asteroid Camera for Optical navigation, supported autonomous navigation to impact the asteroids moon at its centre. A Ritchey-Chretien Telescope was the eyes of the instrument. A CMOS image sensor was used with a resolution of 2560 x 2160 pixels and a wavelength range of 0.4 to 1 micron.
+The software of the computer onboard had a descent from anti-missile technology.
+DART accompanied a secondary spacecraft called
+LICIACube
+, a small CubeSat that was piggybacked by DART and was separated 15 days before the impact to record and give a second-person point-of-view of the effects.
+Solar Arrays:
+DART showcased two kinds of solar arrays, the common roll-out solar arrays and the lesser known
+Transformational Solar Arrays
+. The TSA was the demonstration of the energy efficiency of the coming-of-the-age technology. TSA is a very efficient way of procuring solar energy. Despite being smaller than conventional solar arrays, they give us three times more power because of their high-efficiency solar cells and reflective concentrators.
+Propulsion
+Ionic thrusters propelled the DART spacecraft, demonstrating the
+NEXT
+gridded ion thruster
+(a type of solar electric propulsion). The thruster was powered by 22 sq metres of solar arrays to generate 3.5 kW of power.
+NEXT-C
+is a gridded ion thruster that uses electricity to push the xenon atoms to about 90 km/s. The propeller injector injects xenon atoms into the reaction chamber, and electrons are bombarded on the atoms from the hollow cathode; this process releases more electrons from the xenon atom and makes it positively charged. The electrons are taken aback, with the help of the electromagnetic field created by the magnetic rings, and most of the momentum of the high-speed electron is transferred to the positively charged xenon ion. The magnetic field then provides an extra push and throws the ion outwards, propelling the spacecraft forward. The extra electrons in the chamber are also thrown out from the hollow cathode (neutralizer). This kick is very efficient and tiny at the same time, and thats why it doesnt provide a huge amount of thrust as a chemical-propelled engine does. Due to a technological failure, DART only used the NEXT thrusters for 2 hours and relied mainly on the hydrazine propellant engines. DART also had 12 directional thrusters for easy manoeuvring.
+Path and Impact
+Just after the launch, the spacecraft was deployed in Earths orbit, and the
+ROSA
+(Roll-Out Solar
+Arrays) were rolled out to power the electric propulsion. These arrays had already been tested on the
+International Space Station
+in 2017 and well conceded the power requirements. It was navigated by sophisticated autonomous navigation software developed by the John Hopkins University Applied Physics Laboratory. It did a challenging job locating a target 160 metres in diameter and 11 million kilometres away from Earth. This technology was taken from the Javelin missiles of the US Army. The spacecraft traversed a distance of 920 kilometres in just two and a half minutes. DART switched off the engines 4 minutes before the impact so the camera could grab good pictures just before the impact. It has also ejected the LICIA cube the Italian Space Agency provided 15 days before the impact.
+Conclusion and Follow-up Missions
+The deflection of an asteroid was just a theory until DART made it physically possible. DART demonstrated our capabilities of planetary defence. Though the impact was small on this scale and just changed the orbit by a small percentage, it can have a considerable effect and noticeably change the trajectories of bodies in space-time. Hera mission of the ESA is scheduled to launch in October of this year to study the impact on the Didymos-Dimorphos system and contribute to validating the kinetic impact method to deviate a near-Earth asteroid in a colliding trajectory with Earth. It will measure the crater's size and morphology created by the momentum transferred by an artificial projectile impacting an asteroid, which will allow measuring the efficiency of the deflection produced by the impact. It will also analyse the expanding debris cloud caused by the effect.

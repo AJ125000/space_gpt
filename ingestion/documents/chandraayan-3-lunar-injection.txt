@@ -1,0 +1,33 @@
+???????
+CHANDRAYAAN 3S TRANS-LUNAR INJECTION
+In the ever-expanding realm of lunar exploration, one mission stands poised to redefine humanity's understanding of our closest celestial neighbourthe audacious voyage of
+Chandrayaan 3
+to the moon. Brimming with promise and scientific curiosity, this remarkable undertaking represents a triumphant leap forward in India's space exploration endeavours. With unwavering determination, Chandrayaan 3 embarks on an epic journey to unlock the moon's enigmatic secrets, pushing the boundaries of human knowledge and ambition. In this article, we dive into the details of Chandrayaan 3s injection into the trans-lunar orbit.
+A
+translunar orbit
+, also known as a
+lunar transfer orbit
+or
+lunar trajectory
+, is a specific path a spacecraft takes as it travels from Earth to the moon. When a spacecraft is launched to reach the moon, it typically follows a trajectory that involves several phases to overcome the Earth's gravity and reach the lunar vicinity. The journey begins with the spacecraft being launched into Earth's orbit. From there, it enters a highly elliptical orbit called the "
+parking orbit
+" around Earth, which is usually a temporary holding pattern for the spacecraft before it begins its journey towards the moon. Next, the spacecraft's propulsion system is fired at a specific point in its parking orbit to increase its velocity. This burn is known as the "
+trans-lunar injection
+" (
+TLI
+) manoeuvre. The TLI manoeuvre provides the necessary velocity to escape Earth's gravitational pull and set the spacecraft on a trajectory towards the moon. For Chandrayaan 3, this injection was done on
+August 1, 2023
+.
+During the translunar orbit phase, the spacecraft travels through the vast expanse of space, heading toward the moon. The path taken during this phase can be adjusted based on mission requirements. Still, it typically involves an elliptical orbit around the moon, allowing the spacecraft to approach its destination gradually. Once the spacecraft reaches the moon's vicinity, it can perform additional manoeuvres, such as
+lunar orbit insertion (LOI)
+, to enter a stable orbit around the moon or execute a landing on the lunar surface, depending on the mission's objectives.
+Following the trans-lunar injection, manoeuvring will be done to inject the probe into the lunar orbit; the Lunar-Orbit Insertion (LOI) was planned for
+Aug 5, 2023
+. After this, there will be
+four-orbit manoeuvres
+to make the spacecraft enter into its final orbit at about
+100 km from the Moon's surface
+.
+From here, the lander uses its propellers to land on the moons surface by analysing a proper landing site of about 4 km X 2.4 Km area, which will be a flat surface. The lander has a rover with a life span of 1 Lunar Day (~14 Earth Days). Its purpose is to conduct in-situ scientific experiments.
+The translunar orbit is a critical phase in lunar missions, as it requires precise calculations and execution of manoeuvres to ensure that the spacecraft arrives at the moon with the correct speed and trajectory. It represents a significant engineering and navigational challenge, but the successful traversal of the translunar orbit is a crucial milestone on the path to lunar exploration.
+In a bold leap towards expanding its space exploration endeavours, the successful trans-lunar orbit insertion of Chandrayaan-3 marks a pivotal moment for India's scientific and technological prowess. This achievement not only signifies India's commitment to unravelling the mysteries of the Moon but also serves as a testament to the nation's growing capabilities in the field of space research and exploration. As Chandrayaan-3 embarks on its journey to explore uncharted lunar terrains, the mission promises to unveil new insights into the Moon's geological history, enhance our understanding of planetary evolution, and inspire future generations. With each step, India advances on its quest to unlock the secrets of the cosmos, reinforcing its position as a critical player in the global space community.

@@ -1,0 +1,110 @@
+???????
+The Great Attractor
+Prerequisites
+Knowing these terms can help one better understand the article.
+The Doppler Effect
+-
+The Doppler Effect is an effect that explains the apparent change in frequency of a wave an object experiences when it is moving with respect to another object. Also, the Doppler Effect of Sound is the reason police sirens get lower in pitch when they are going away from us. Similarly, the
+relativistic
+Doppler Effect of Light (not quite the same as that of sound, but very similar) tells us how fast an object is moving towards or away from us - by seeing the light's wavelength change. The farther an object moves away from us, the redder the light from it appears to us, indicating an increase in its apparent wavelength. Similarly, the apparent wavelength of light from an object coming close to us decreases, indicating a shift towards the blue part of the visible spectrum.
+Redshifts and Blueshifts
+-
+Mathematically, the fractional change in wavelength of light from an object moving with respect to us is represented by
+z,
+which is called a redshift (
+z
+> 1) or a blueshift (
+z
+< 1), according to whether the wavelength is increasing (
+i.e.
+the object is moving away from us) or decreasing (
+i.e.
+the object is moving towards us). The ratio of apparent and true wavelength equals 1 +
+z
+.
+The Hubble Space Telescope (HST)
+-
+A space telescope launched by NASA into low-earth orbit in 1990. While not the worlds first telescope, it is one of the largest and most versatile, and renowned as a public boon for astronomy. Space telescopes have a massive advantage over ground telescopes. Ground telescopes are much easier and cheaper to build and repair, but they have to look through the thick layer that we call the Earths atmosphere. This can lead to erroneous images because of the dispersion of light from dust particles, among other reasons. Space telescopes dont have this limitation, at least not with respect to Earth.
+Zone of Avoidance (ZoA)
+-
+While viewing space from Earth, the interstellar dust stars in the galactic plane of the Milky Way (the plane where the majority of the galaxys mass lies) obstruct the view of around 20% of the extragalactic sky, at least for visible wavelengths. This area, essentially obscured by the Milky Way itself, is called the Zone of Avoidance or the Zone of Galactic Obscuration (ZGO) and is why optical galactic catalogues are usually incomplete.
+Galaxy Group
+-
+An aggregation of about 50 gravitationally bound galaxies, each
+at least as bright as the Milky Way.
+Galaxy Cluster
+-
+A gravitationally bound structure consisting of hundreds to thousands of galaxies with typical masses ranging from 10
+14
+to 10
+15
+solar masses.
+Galaxy Supercluster
+-
+A large group of smaller galaxy groups or galaxy clusters; superclusters are among the largest known structures in the universe.
+Our Galactic Hierarchy
+-
+The Milky Way is part of a galaxy group called the Local Group. This group, along with many others, is part of a supercluster known as the Virgo Supercluster, which belongs to an even larger supercluster called the Laniakea Supercluster.
+Introduction - An Expanding Universe
+In 1915, Albert Einstein put forward his famous General Theory of Relativity. These equations were telling him the Universe must be either expanding or contracting. Not wanting to believe this, since a static Universe was the accepted notion at the time, Einstein introduced a cosmological constant (more like a fudge factor) to counter the effect of gravity and achieve a static Universe.
+Einstein would later remember this decision as the greatest blunder of his life. In 1929, after noticing the redshifts in various galaxies, Edwin Hubble discovered that the Universe
+is
+expanding!
+But Thats Not the Whole Story
+While the Universe
+is
+expanding, in the second half of the twentieth century, scientists started getting hints of a massive region of gravitational attraction in intergalactic space. This space was so massive that its gravitational attraction seemed to make the Milky Way move toward it (at about 600 kilometres per second). The 1980s brought new discoveries, such as the fact that the Milky Way is not the only galaxy impacted - approximately 400 elliptical galaxies are moving toward a region beyond the Zone of Avoidance, earning it the name
+Great Attractor
+in 1987. The only problem? It lies in, well, the
+Zone of Avoidance
+. That is why observing it directly in the visible light spectrum was tough.
+However, such constraints are only for the
+visible
+spectrum of light. With the help of infrared, X-ray, and radio telescopy, we have painted an approximate picture of the patch containing this mysterious space. Intense efforts in the late 1990s identified a cluster of galaxies likely to be at the centre of the Great Attractor region - the Norma Cluster.
+The Attractor(s)
+The
+Norma Cluster
+is a galaxy cluster located about 220 million lightyears away. When astronomers finally acquired a vantage point of this region, they discovered thousands of galaxies tethered to each other. And this was massive - about 1000 trillion (10
+15
+) times the mass of our Sun!
+However, even this mass did not fully account for the strong pull on the galaxies, which could mean that something even more significant could be pulling the strings. Further exploration led to another profound discovery - the Shapley Supercluster.
+The
+Shapley Supercluster
+is located around 652 lightyears from us, and its effect on us cannot be ignored since it weighs around ten million billion Suns. That is massive enough for us to think of the possibility that the Shapley Supercluster is the actual reason for the inward motion of the galaxies. A likely explanation can be that the Shapley Supercluster is a gravitational beast towards which the Milky Way, the Andromeda Galaxy, the Norma Cluster and everything else is attracted - the great Attractor itself is moving towards this supercluster.
+The story does not end here either. The discovery of the Shapley Supercluster made scientists wonder if more such superclusters could exist in the Zone of Avoidance. And very recently, Renée Kraan-Korteweg and her team - the same team that had discovered the Norma Cluster about 20 years prior - finally solved a mystery they had been working on for decades. Using data from the
+Anglo-Australian Telescope (AAT)
+and the
+South African Large Telescope (SALT)
+, Kraan-Korteweg and her team
+announ
+ced the discovery of another supercluster in the Zone of Avoidance, even further beyond the Shapley Supercluster - as far as 800 million light-years away, and almost just as massive. In 2016, scientists welcomed into their galactic catalogue the
+Vela Supercluster
+.
+All these discoveries can be seen as pieces of the puzzle. The massive gravitational attraction of the Norma Cluster, the Shapley Supercluster and a little tug from the Vela Supercluster is what could be attracting so many galaxies in the direction of the region of the Zone of Avoidance we call the Great Attractor.
+Now that we know what the Great Attractor is (or, more precisely, what it
+can
+be), let us address one last question.
+Will All the Galaxies Collide?
+Going by what todays astronomy says, the chances of galaxies colliding due to that Great Attractor - either at a single point or on the way there - are slim to none.
+Let us go back to when Hubble discovered that the Universe is expanding and why it is expanding - the mysterious concept of dark energy.
+We know practically nothing about dark energy, except that it exists. After all, we had to formulate
+some
+theory to explain why the Universe is expanding despite the existence of so much ordinary matter and dark matter. As the Universe expands and more empty space is formed, that gives rise to more dark energy, thus making the Universe expand faster.
+The expansion of the Universe is fast and strong enough that none of the galaxies being attracted towards the Great Attractor are likely even to come close to colliding at a single point.
+What If All the Galaxies Do Collide?
+Now,
+that
+would be interesting. The answers to such questions do not strictly have to do with the idea of the Great Attractor but are still fun to know about.
+For instance, the galaxy our Milky Way is most likely to collide with is the Andromeda galaxy, which is currently about 2.5 million lightyears away from us. A collision between two such galaxies would be massive, though not in a Star Wars way.
+A tiny amount of stars from each galaxy will collide with each other. Not all of them would, because there is a lot of empty space separating stars and/or solar systems, consisting of interstellar dust and gas. It is more likely that the collision would result in a compression of these clouds of gas (mostly hydrogen) and lead to the formation of new stars. This can cause premature ageing of the newly-formed galaxy (Milkdromeda, as most people call it), as it uses up its fuel.
+This may not look like a big deal - but the massive part is yet to come.
+The two supermassive black holes at the centre of these galaxies will eventually come close to each other and collide into one even larger supermassive black hole. The most likely result is a gigantic quasar. The energy this collision will release is enough to cause ripples in spacetime - and that is only for two black holes colliding. Suppose all black holes of all galaxies moving towards the Great Attractor collide into one highly massive black hole. In that case, the immense amount of energy released will be enough to change the structure of the Universe as we know it.
+Fortunately, we do not have to worry about that. As discussed above, we do not have to worry about the Great Attractor causing a collision of all the galaxies it attracts. And even if it does, it wont happen overnight (if night is a term we can use for galaxies). The collision between the Milky Way and Andromeda galaxies alone is expected to occur in nearly 4 billion years.
+Conclusion
+Astronomy has come a long way in the last one hundred years or so. With telescopes as strong as the Hubble Space Telescope and the relatively recent James Webb Space Telescope, we can see more and more through the Zone of Avoidance.
+However, I find it worth mentioning that we do not fully know what the
+Great Attractor
+is - we just know what it is
+most likely
+to be. We do know that the Norma Cluster, the Shapley Supercluster and the Vela Supercluster together are attracting numerous galaxies towards them. But we still do not fully understand what the Great Attractor is, where it exactly is, what it is composed of, and so on.
+But that is science, isnt it? Rather than being demoralised that we will practically never know about most of the beautiful and mysterious processes in the Universe, we get excited about what lies ahead!

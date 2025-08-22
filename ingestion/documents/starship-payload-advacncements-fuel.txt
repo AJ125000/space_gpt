@@ -1,0 +1,14 @@
+???????
+The Space Exploration Technologies Corp. or commonly known as SpaceX, is probably the most famous space tech Industry that has been trying to develop a reusable launch vehicle since 2012. They are currently developing the fully reusable heavy-lift launch vehicle named Starship, which will be one of the most important facets of our journey to Mars.
+In our series of The Road to The Red Planet, we felt that we ought to give some emphasis on the journey itself because someone once said.
+Sometimes the journey is more important than the Destination.
+SpaceXs Starship is a combination of a super heavy Rocket and a spacecraft. Did we mention that it's reusable? It is designed to carry both crew and cargo to Mars and beyond.
+As we said, the Starship is composed of a spacecraft and a super-heavy rocket. The super-heavy rocket has features as illustrated in the image below.
+The Propellant is mostly liquid Methane and liquid Oxygen and can generate a thrust of about 72 Mega Newtons.
+The Starship Spacecraft:
+The Starship can carry up to 100 tonnes to Low Earth Orbits. The cargo can also be used for rapid point-to-point Earth transport. It can carry both Cargo and Passengers. It is fuelled by the same Liquid Methane and liquid Oxygen combination. The Payload Manifestations not only allows you to launch cargo in a single mission but also allows you to launch in multiple missions and assemble later by taking advantage of SpaceXs multiple-manifest launches. The unique and large geometry of the Starship payload bay also opens new opportunities for payload integration. Starship has the ability to mount supports along the sidewalls or nose. When large payloads are co-manifested on Starship, they are generally mounted side-by-side on the payload adapter.
+Starship crew configuration can transport up to 100 people from Earth into LEO and onto the Moon and Mars. The crew configuration of Starship includes private cabins, large common areas, centralised storage, solar storm shelters, and a viewing gallery.
+SpaceX combines the two to create a 120 m-long Vehicle capable of transporting cargo and passengers for interplanetary exploration and colonization.
+You can find more information about the Starship here:
+Starship User Guide
+.

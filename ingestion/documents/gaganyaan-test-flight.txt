@@ -1,0 +1,37 @@
+???????
+On October 21, 2023, at 8:00 AM IST, the Indian Space Research Organisation (ISRO) successfully launched the Gaganyaan uncrewed test flight from the Satish Dhawan Space Centre (SDSC) in Sriharikota, Andhra Pradesh, India. The mission was carried out using the Geosynchronous Satellite Launch Vehicle Mark III (GSLV Mk III) launch vehicle, with the Gaganyaan spacecraft atop.
+The primary objective of the mission was to demonstrate the in-flight abort capabilities of the Crew Escape System (CES) at a Mach number of 1.2. The CES is a critical system that is designed to safely separate the Crew Module (CM) from the launch vehicle in the event of an emergency during ascent.
+The CES consists of five types of quick-acting solid motors:
+Crew Escape System Jettisoning Motor (CJM)
+: This motor is responsible for scrapping the CES from the launch vehicle.
+High-altitude Escape Motor (HEM):
+This motor provides the thrust to safely separate the CM from the launch vehicle at high altitudes.
+Low-altitude Escape Motor (LEM)
+: This motor provides the thrust required to safely separate the CM from the launch vehicle at low altitudes.
+Low-altitude Pitch Motor (LPM)
+: This motor is used to control the pitch of the CM during separation.
+High-altitude Pitch Motor (HPM)
+: This motor is used to control the pitch of the CM during separation at high altitudes.
+All CES motors use a propellant formulation known as PEDCEM, a high-performance solid propellant developed by ISRO.
+In addition to demonstrating the CES, the mission also aimed to assess the performance of the newly developed Test Vehicle (TV) and gather crucial data on the CM's behaviour and deceleration systems at higher altitudes.
+The TV is a single-stage liquid rocket designed explicitly for the Gaganyaan uncrewed test flight. It has a mass of 44 tons, a length of 34.95 meters, and a diameter of 2.1 meters. The TV is powered by four Vikas engines, which use Liquid Oxygen (LOX) and Liquid Hydrogen (LH2) as propellants.
+The CM is a pressurised capsule that is designed to accommodate three astronauts. It has a mass of 4.5 tons, a diameter of 4.05 meters, and a height of 3.2 meters. The CM is equipped with various life support systems, including an environmental control system, a communication system, and a food and water system.
+The Gaganyaan uncrewed test flight sequence was as follows:
+Liftoff:
+The GSLV Mk III launch vehicle ascended vertically from the SDSC launch pad.
+Ascent
+: The GSLV Mk III continued its climb until reaching an altitude of approximately 11.7 kilometres.
+CES Activation
+: The CES was activated at a Mach number of 1.2, successfully separating the CM from the TV.
+CM Coast Phase
+: The CM coasted to an altitude of approximately 17 kilometres.
+Drogue Parachute Deployment
+: The drogue parachute was deployed at approximately 16.7 kilometres to decelerate the CM's descent.
+Main Parachute Deployment
+: The main parachute was deployed at less than 2.5 kilometres.
+Splashdown
+: The CM splashed down safely in the Bay of Bengal.
+These are the real-time images that were captured during the test flight.
+The Gaganyaan uncrewed test flight was a resounding success. The TV performed flawlessly, achieving all of its mission objectives. The CES also successfully separated the CM from the TV at the desired Mach number. The CM also safely splashed down in the Bay of Bengal.
+The data gathered from the Gaganyaan uncrewed test flight will be invaluable in ensuring the success of the upcoming crewed mission, which is scheduled to launch in 2024. The successful completion of this mission is a significant milestone in India's human spaceflight program, and it marks a significant step forward in the country's quest to become a major player in space exploration.
+TV-D1 Test Flight

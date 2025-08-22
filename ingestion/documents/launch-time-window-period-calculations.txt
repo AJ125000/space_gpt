@@ -1,0 +1,33 @@
+???????
+2020 has been quite a disappointing year for many people, a pandemic, a blast, and whatnot, but it does have its perks. 2020 is being called the year of Mars, owing to the large number of missions planned.
+S.No
+Name of Mission
+Launch Date
+1
+Emirates Mars Mission
+20 July 2020
+2
+Tianwen I
+23 July 2020
+3
+Mars 2020
+30 July 2020
+The above-mentioned are just a few missions, but all of them were launched towards the end of July. The reason for this is that the Launch Period for the Mars missions is mid-July to August. The Launch Period is a set of particular days during which the vessel must be launched to reach its destination. A term that is generally confused with this is Launch Window, which refers to the time during the day when the launch must occur to reach its destination.
+Launch Period - Days of the year when launch must happen.
+Launch Window - Time of the day during which launch must occur.
+When it comes to space missions, timing is key. If the spacecraft intends to rendezvous with another spacecraft, a planet, or other points in space, the launch must be carefully timed so that the orbits overlap at some point in the future. If the weather is bad or a malfunction occurs during a launch window, the mission must be postponed until the next launch window appropriate for the flight.
+In case some of you are wondering why we dont just launch when Mars is closest to us, we found a piece from ESA that words it together better than we ever could.
+But why did we need a launch window for Mars Express? If we are going to send a mission to a planet, why not just launch the rocket at any time, find where the planet is in the sky, point the rocket at it and travel there?
+Imagine the Solar System as an athletics race track. If you were watching the 400 meters race from the centre of the track and wanted to intercept one of the runners taking part, one way would be to chase the runner you wish to stop. If you were fast enough, you might eventually catch up but only after expending a lot of energy and travelling a long way.
+A much better way to intercept your athlete is to walk across the centre to the other side of the circular track. It is a much shorter distance, and you use much less energy and time getting there.
+Credits: ESA - What is a 'launch window'?
+The launch period is calculated by considering many features, but the most essential feature is Fuel Consumption. We generally launch the vessel such that it reaches its destination while consuming the least fuel. So a direct journey along a straight line to Mars is not very fuel-efficient.
+So we take the help of gravity and take an elliptical orbit to the destination. This may take a longer time but saves quite a lot of fuel.
+Source:
+Nasa images
+There are many ways to construct the elliptical transfer orbit, but the most famous one is the Hohmann transfer orbit. (it is debated if it is the most fuel-efficient transfer available).
+Now, the journey takes almost 0.70 years, and now, we need to make sure that when the vessel's orbit intersects with the orbit of Mars, the planet must be at the point in its orbit. This is where the calculation of the launch period comes into play. We launch the vessel when Earth and Mars are aligned properly.
+Calculations of Alignment and Journey Time:
+Flight to Mars: How Long? And along what path?
+For the launched vessel and Mars to intersect at the destination. We must launch when Mars is 44.44 deg away from Earth. (Calculations are in the previous link) This occurs from mid-July to August every 26 months. This explains the Launch Period but does not explain the Launch Window.
+While explaining the transfer orbit on paper, we neglect one aspect of the orbit, the inclination. So we require the Orbital plane of the vessel and Mars to be coplanar for them to intersect. The Launch Window times this, and it occurs when the launch site is inclined with the plane of the required object.
