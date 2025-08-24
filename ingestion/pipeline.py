@@ -1,7 +1,7 @@
 import os
 import glob
 from llama_index.core import Document, Settings, VectorStoreIndex, SummaryIndex, StorageContext
-from llama_index.embeddings.gemini import GeminiEmbedding
+from llama_index.embeddings.google_genai import GoogleGenAIEmbedding
 from llama_index.vector_stores.qdrant import QdrantVectorStore
 import qdrant_client
 from qdrant_client.http import models as qmodels  # for explicit create
@@ -20,9 +20,9 @@ def _embedding_dim():
 def main():
     os.makedirs(settings.SUMMARY_INDEX_DIR, exist_ok=True)
 
-    # Use Gemini free embedding model
+    # Use Google GenAI free embedding model
     print("Using Google's free 'embedding-001' model.")
-    Settings.embed_model = GeminiEmbedding(
+    Settings.embed_model = GoogleGenAIEmbedding(
         model_name="models/embedding-001",
         api_key=settings.google_api_key,
     )

@@ -4,8 +4,15 @@ from .graph import graph_app  # relative import from the same package
 async def main():
     # Hardcoded query
     state = {
-        "original_query": "What is James Webb Telescope?",
-        "chat_history": []
+        "original_query": "Who is Abhinav Gothwal?",
+        "chat_history": [],
+        "rag_query": "",
+        "search_query": "",
+        "is_out_of_scope": False,
+        "retrieved_docs": "",
+        "search_results": "",
+        "filtered_context": "",
+        "final_answer": "",
     }
 
     # Run the graph (it has async nodes)

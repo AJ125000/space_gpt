@@ -3,12 +3,14 @@ from langchain_core.pydantic_v1 import BaseModel, Field
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langgraph.graph import StateGraph, END
 import asyncio
+import os
 
 from .schemas import GraphState
 from core.retriever import knowledge_base
 from core.tools import web_search_tool
 from .config import settings
 
+os.environ["GOOGLE_API_KEY"] = settings.google_api_key
 # Initialize the Gemini LLM for the graph nodes
 llm = ChatGoogleGenerativeAI(
     model="gemini-1.5-flash-latest", 
@@ -55,7 +57,7 @@ def critique_node(state: GraphState):
     prompt = ChatPromptTemplate.from_template(
         """You are a relevance analysis agent. Examine the retrieved documents and web search results against the original user query.
          Filter out any information that is not directly relevant.
-         Synthesize the remaining, highly-relevant pieces into a single, consolidated context.
+         Synthesize the remaining pieces into a single, consolidated context.
 
          Original Query: {original_query}
          Knowledge Base Docs: {retrieved_docs}
@@ -72,7 +74,7 @@ def critique_node(state: GraphState):
 def writer_node(state: GraphState):
     print("---WRITING FINAL ANSWER---")
     prompt = ChatPromptTemplate.from_template(
-        """You are a final answer synthesizer. Craft a comprehensive, well-structured answer using ONLY the provided 'Filtered Context'.
+        """You are a final answer synthesizer. Craft a comprehensive, well-structured answer using the provided 'Filtered Context'.
          If the context is empty, inform the user you couldn't find relevant information.
 
          User's Original Query: {original_query}
@@ -84,7 +86,9 @@ def writer_node(state: GraphState):
 
 def out_of_scope_node(state: GraphState):
     print("---HANDLING OUT OF SCOPE---")
-    return {"final_answer": "I'm sorry, but I am a specialized chatbot for space-related topics. I can't help with that."}
+    final_answer = "I'm sorry, but I am a specialized chatbot for space-related topics. I can't help with that."
+    print(f"Final Answer: {final_answer}")
+    return {"final_answer": final_answer}
 
 # --- GRAPH ASSEMBLY ---
 def create_graph():
@@ -98,9 +102,22 @@ def create_graph():
     workflow.set_entry_point("planner")
 
     def should_continue(state: GraphState):
-        return "out_of_scope" if state["is_out_of_scope"] else "retrieve_and_search"
+        """
+        Conditional edge function to decide the next node based on 'is_out_of_scope'.
+        """
+        if state["is_out_of_scope"]:
+            return "out_of_scope"
+        else:
+            return "retrieve_and_search"
 
-    workflow.add_conditional_edges("planner", should_continue)
+    workflow.add_conditional_edges(
+        "planner",
+        should_continue,
+        {
+            "retrieve_and_search": "retrieve_and_search",
+            "out_of_scope": "out_of_scope"
+        }
+    )
     workflow.add_edge("retrieve_and_search", "critique")
     workflow.add_edge("critique", "writer")
     workflow.add_edge("writer", END)

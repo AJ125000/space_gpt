@@ -1,26 +1,37 @@
-# --- Core Application & API ---
-# FastAPI and Uvicorn for the web server.
+# ── Core web layer ──────────────────────────────────────────
 fastapi==0.111.0
 uvicorn[standard]==0.30.1
-pydantic-settings==2.3.4
+pydantic-settings==2.10.1
 python-dotenv==1.0.1
 
-# --- LangChain & LangGraph ---
-# Core LangChain/LangGraph packages.
-langchain==0.2.14
-langchain-community
-langgraph==0.1.2
-langchain-google-genai==1.0.6
-duckduckgo-search==6.1.8
+# ── LangChain core + community tools ────────────────────────
+# NOTE: we drop langchain-google-genai because it still pins the
+# legacy SDK and causes a hard conflict.  If you really need it,
+# stay on its 1.x series and pin google-ai-generativelanguage==0.6.15,
+# but that path will be EOL on 31 Aug 2025.
+langchain==0.3.27
+langchain-community==0.3.27
+langchain-google-genai==2.1.9
 
-# --- LlamaIndex & Vector DB ---
-# CORRECTED: All versions are now verified against PyPI.
-llama-index==0.10.59
-llama-index-llms-gemini==0.1.9
-llama-index-embeddings-gemini==0.1.8
-llama-index-vector-stores-qdrant==0.1.6
-qdrant-client==1.9.2
+# ── LangGraph orchestrator ──────────────────────────────────
+langgraph==0.6.6
 
-# --- Observability ---
-langsmith==0.1.83
+# ── Google GenAI SDK (GA since Aug 2025) ────────────────────
+google-genai>=1.31.0        # replaces google-generativeai 0.x
+# (google-genai bundles the right proto dependencies; no extra pin required)
+
+# ── LlamaIndex stack (tested together) ──────────────────────
+llama-index==0.13.3                 # meta-package
+llama-index-core==0.13.3
+llama-index-workflows==1.3.0
+# ➟ new GenAI helper libs (Gemini helpers are deprecated)
+llama-index-llms-google-genai==0.3.0
+llama-index-embeddings-google-genai==0.3.0
+llama-index-vector-stores-qdrant==0.8.1
+
+# ── Vector DB client ────────────────────────────────────────
+qdrant-client[fastembed]>=1.14.2      # grpcio≥1.74 already handled
+
+# ── Observability / scraping ────────────────────────────────
+langsmith==0.4.14
 trafilatura==1.5.0
