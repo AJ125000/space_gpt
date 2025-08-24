@@ -4,7 +4,7 @@ from .graph import graph_app  # relative import from the same package
 async def main():
     # Hardcoded query
     state = {
-        "original_query": "What is space",
+        "original_query": "What is James Webb Telescope?",
         "chat_history": []
     }
 
