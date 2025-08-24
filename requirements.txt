@@ -23,3 +23,4 @@ qdrant-client==1.9.2
 
 # --- Observability ---
 langsmith==0.1.83
+trafilatura==0.9.1
