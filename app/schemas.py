@@ -24,3 +24,4 @@ class GraphState(TypedDict):
     search_results: str
     filtered_context: str
     final_answer: str
+    _session_id: str  # Optional session ID for step tracking

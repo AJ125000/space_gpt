@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Space Search AI - ChatGPT Style</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #212121; color: #e0e0e0;
+      height: 100vh; display: flex; overflow: hidden;
+    }
+    .sidebar {
+      width: 260px; background-color: #171717; border-right: 1px solid #303030;
+      display: flex; flex-direction: column; transition: all 0.3s ease;
+    }
+    .sidebar-header { padding: 12px; border-bottom: 1px solid #303030; }
+    .new-chat-btn {
+      width: 100%; background: linear-gradient(45deg, #10b981, #059669);
+      color: white; border: none; border-radius: 8px; padding: 12px 16px;
+      font-size: 14px; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.2s;
+    }
+    .new-chat-btn:hover { background: linear-gradient(45deg, #059669, #047857); transform: translateY(-1px); }
+    .chat-history { flex: 1; overflow-y: auto; padding: 8px; }
+    .chat-item {
+      padding: 12px 16px; margin: 2px 0; border-radius: 8px; cursor: pointer;
+      transition: all 0.2s; font-size: 14px; color: #b0b0b0; border: 1px solid transparent;
+    }
+    .chat-item:hover { background-color: #2a2a2a; color: #e0e0e0; }
+    .chat-item.active { background-color: #2a2a2a; color: #10b981; border-color: #10b981; }
+    .chat-item-title { font-weight: 500; margin-bottom: 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .chat-item-preview { font-size: 12px; color: #707070; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .main-content { flex: 1; display: flex; flex-direction: column; background-color: #212121; }
+    .chat-header { padding: 16px 24px; border-bottom: 1px solid #303030; background-color: #171717; display: flex; align-items: center; gap: 12px; }
+    .chat-title { font-size: 18px; font-weight: 600; color: #e0e0e0; }
+    .status-indicator { width: 8px; height: 8px; border-radius: 50%; background-color: #10b981; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    .chat-container { flex: 1; overflow-y: auto; padding: 20px; scroll-behavior: smooth; }
+    .message { margin: 20px 0; display: flex; align-items: flex-start; gap: 12px; max-width: 800px; margin-left: auto; margin-right: auto; }
+    .message.user { flex-direction: row-reverse; }
+    .message-avatar {
+      width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; flex-shrink: 0;
+    }
+    .message.user .message-avatar { background: linear-gradient(45deg, #667eea, #764ba2); color: white; }
+    .message.bot .message-avatar { background: linear-gradient(45deg, #10b981, #059669); color: white; }
+    .message-content {
+      background-color: #2a2a2a; border-radius: 12px; padding: 16px 20px; max-width: 70%;
+      word-wrap: break-word; line-height: 1.6; border: 1px solid #404040;
+    }
+    .message.user .message-content { background-color: #1a365d; border-color: #2d5aa0; }
+    .loading-message .message-content { display: flex; align-items: center; gap: 8px; }
+    .loading-dots { display: flex; gap: 4px; }
+    .loading-dots span { width: 6px; height: 6px; border-radius: 50%; background-color: #10b981; animation: loading 1.4s infinite ease-in-out both; }
+    .loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+    .loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+    @keyframes loading { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
+    .input-area { padding: 20px; border-top: 1px solid #303030; background-color: #171717; }
+    .input-container { max-width: 800px; margin: 0 auto; position: relative; }
+    .message-input {
+      width: 100%; background-color: #2a2a2a; border: 1px solid #404040; border-radius: 12px; padding: 16px 60px 16px 20px;
+      font-size: 16px; color: #e0e0e0; resize: none; min-height: 24px; max-height: 120px; outline: none; transition: border-color 0.2s;
+    }
+    .message-input:focus { border-color: #10b981; }
+    .message-input::placeholder { color: #707070; }
+    .send-button {
+      position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+      background: linear-gradient(45deg, #10b981, #059669); border: none; border-radius: 8px; width: 36px; height: 36px;
+      cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s;
+    }
+    .send-button:hover:not(:disabled) { background: linear-gradient(45deg, #059669, #047857); transform: translateY(-50%) scale(1.05); }
+    .send-button:disabled { opacity: 0.5; cursor: not-allowed; }
+    .empty-state { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; text-align: center; color: #707070; }
+    .empty-state-icon { font-size: 64px; margin-bottom: 16px; }
+    .empty-state-title { font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #e0e0e0; }
+    .empty-state-subtitle { font-size: 16px; margin-bottom: 24px; }
+    .example-prompts {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 12px; max-width: 600px; margin-top: 20px;
+    }
+    .example-prompt {
+      background-color: #2a2a2a; border: 1px solid #404040; border-radius: 12px; padding: 16px; cursor: pointer; transition: all 0.2s; text-align: left;
+    }
+    .example-prompt:hover { border-color: #10b981; background-color: #1a2e1a; }
+    @media (max-width: 768px) {
+      .sidebar { width: 100%; position: absolute; z-index: 1000; transform: translateX(-100%); }
+      .sidebar.open { transform: translateX(0); }
+      .message-content { max-width: 85%; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <button class="new-chat-btn" onclick="startNewChat()">
+        <span>➕</span> New Chat
+      </button>
+    </div>
+    <div class="chat-history" id="chatHistory"></div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="chat-header">
+      <div class="status-indicator"></div>
+      <h1 class="chat-title">Space Search AI</h1>
+    </div>
+
+    <div class="chat-container" id="chatContainer">
+      <div class="empty-state" id="emptyState">
+        <div class="empty-state-icon">🚀</div>
+        <div class="empty-state-title">Welcome to Space Search AI</div>
+        <div class="empty-state-subtitle">Ask me anything about space, astronomy, and cosmic phenomena!</div>
+
+        <div class="example-prompts">
+          <div class="example-prompt" onclick="sendExampleQuery('What is the largest planet in our solar system?')">
+            <div class="example-prompt-title">Planetary Facts</div>
+            <div class="example-prompt-text">What is the largest planet in our solar system?</div>
+          </div>
+          <div class="example-prompt" onclick="sendExampleQuery('How do black holes form?')">
+            <div class="example-prompt-title">Cosmic Phenomena</div>
+            <div class="example-prompt-text">How do black holes form?</div>
+          </div>
+          <div class="example-prompt" onclick="sendExampleQuery('Tell me about the Mars rovers')">
+            <div class="example-prompt-title">Space Exploration</div>
+            <div class="example-prompt-text">Tell me about the Mars rovers</div>
+          </div>
+          <div class="example-prompt" onclick="sendExampleQuery('What are the phases of the moon?')">
+            <div class="example-prompt-title">Astronomy Basics</div>
+            <div class="example-prompt-text">What are the phases of the moon?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-area">
+      <div class="input-container">
+        <textarea class="message-input" id="messageInput" placeholder="Ask me about space and astronomy..." rows="1"></textarea>
+        <button class="send-button" id="sendButton" onclick="sendMessage()"><span>🚀</span></button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentChatId = null;
+    let chatHistory = JSON.parse(localStorage.getItem('spaceAI_chats') || '{}');
+    let messageHistory = [];
+    let isLoading = false;
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadChatHistory();
+      setupEventListeners();
+      showEmptyState();
+    });
+
+    function setupEventListeners() {
+      const messageInput = document.getElementById('messageInput');
+      const sendButton = document.getElementById('sendButton');
+
+      messageInput.addEventListener('input', function() {
+        this.style.height = 'auto';
+        this.style.height = this.scrollHeight + 'px';
+        sendButton.disabled = !this.value.trim() || isLoading;
+      });
+
+      messageInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' && !e.shiftKey) {
+          e.preventDefault();
+          if (!isLoading && this.value.trim()) sendMessage();
+        }
+      });
+    }
+
+    function startNewChat() {
+      currentChatId = null;
+      messageHistory = [];
+      clearChat();
+      showEmptyState();
+      updateChatHistoryUI();
+    }
+
+    function clearChat() {
+      const chatContainer = document.getElementById('chatContainer');
+      chatContainer.innerHTML = '';
+    }
+
+    function showEmptyState() {
+      const chatContainer = document.getElementById('chatContainer');
+      chatContainer.innerHTML = `
+        <div class="empty-state">
+          <div class="empty-state-icon">🚀</div>
+          <div class="empty-state-title">Welcome to Space Search AI</div>
+          <div class="empty-state-subtitle">Ask me anything about space, astronomy, and cosmic phenomena!</div>
+          <div class="example-prompts">
+            <div class="example-prompt" onclick="sendExampleQuery('What is the largest planet in our solar system?')">
+              <div class="example-prompt-title">Planetary Facts</div>
+              <div class="example-prompt-text">What is the largest planet in our solar system?</div>
+            </div>
+            <div class="example-prompt" onclick="sendExampleQuery('How do black holes form?')">
+              <div class="example-prompt-title">Cosmic Phenomena</div>
+              <div class="example-prompt-text">How do black holes form?</div>
+            </div>
+            <div class="example-prompt" onclick="sendExampleQuery('Tell me about the Mars rovers')">
+              <div class="example-prompt-title">Space Exploration</div>
+              <div class="example-prompt-text">Tell me about the Mars rovers</div>
+            </div>
+            <div class="example-prompt" onclick="sendExampleQuery('What are the phases of the moon?')">
+              <div class="example-prompt-title">Astronomy Basics</div>
+              <div class="example-prompt-text">What are the phases of the moon?</div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function sendExampleQuery(query) {
+      document.getElementById('messageInput').value = query;
+      sendMessage();
+    }
+
+    // Convert UI message history to backend format
+    function toBackendHistory(messages, limit = 20) {
+      const slice = messages.slice(Math.max(messages.length - limit, 0));
+      return slice.map(m => {
+        let role = m.role === 'user' ? 'user' : 'assistant';
+        return { role, content: m.content };
+      });
+    }
+
+    async function sendMessage() {
+      const messageInput = document.getElementById('messageInput');
+      const query = messageInput.value.trim();
+      if (!query || isLoading) return;
+
+      messageInput.value = '';
+      messageInput.style.height = 'auto';
+      document.getElementById('sendButton').disabled = true;
+
+      const chatContainer = document.getElementById('chatContainer');
+      const emptyState = chatContainer.querySelector('.empty-state');
+      if (emptyState) emptyState.remove();
+
+      if (!currentChatId) {
+        currentChatId = Date.now().toString();
+        chatHistory[currentChatId] = {
+          title: query.substring(0, 50) + (query.length > 50 ? '...' : ''),
+          messages: [],
+          timestamp: new Date().toISOString()
+        };
+      }
+
+      const userMessage = { role: 'user', content: query, timestamp: new Date().toISOString() };
+      messageHistory.push(userMessage);
+      chatHistory[currentChatId].messages.push(userMessage);
+      displayMessage(userMessage);
+
+      isLoading = true;
+      const loadingMessage = addLoadingMessage();
+
+      try {
+        // Create request body
+        const requestBody = {
+          query: query,
+          chat_history: toBackendHistory(messageHistory.slice(0, -1))
+        };
+
+        // Make POST request to streaming endpoint
+        const response = await fetch('http://localhost:8000/chat-stream', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(requestBody)
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = '';
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          buffer += decoder.decode(value, { stream: true });
+          const lines = buffer.split('\n');
+          buffer = lines.pop(); // Keep incomplete line in buffer
+
+          for (const line of lines) {
+            if (line.startsWith('data: ')) {
+              const data = line.slice(6);
+              if (data.trim()) {
+                try {
+                  const parsed = JSON.parse(data);
+                  
+                  if (parsed.type === 'step') {
+                    updateLoadingMessage(loadingMessage, parsed.step);
+                  } else if (parsed.type === 'answer') {
+                    loadingMessage.remove();
+                    
+                    const assistantMessage = {
+                      role: 'assistant',
+                      content: parsed.answer,
+                      timestamp: new Date().toISOString()
+                    };
+                    messageHistory.push(assistantMessage);
+                    chatHistory[currentChatId].messages.push(assistantMessage);
+                    displayMessage(assistantMessage);
+                  } else if (parsed.type === 'error') {
+                    loadingMessage.remove();
+                    
+                    const errorMessage = {
+                      role: 'assistant',
+                      content: `Error: ${parsed.error}`,
+                      timestamp: new Date().toISOString()
+                    };
+                    messageHistory.push(errorMessage);
+                    chatHistory[currentChatId].messages.push(errorMessage);
+                    displayMessage(errorMessage);
+                  } else if (parsed.type === 'done') {
+                    break;
+                  }
+                } catch (e) {
+                  console.error('Error parsing SSE data:', e);
+                }
+              }
+            }
+          }
+        }
+
+      } catch (error) {
+        console.error('Error:', error);
+        loadingMessage.remove();
+        const errorMessage = {
+          role: 'assistant',
+          content: 'Sorry, I\'m having trouble connecting to the server. Please make sure the backend is running on http://localhost:8000',
+          timestamp: new Date().toISOString()
+        };
+        messageHistory.push(errorMessage);
+        chatHistory[currentChatId].messages.push(errorMessage);
+        displayMessage(errorMessage);
+      }
+
+      isLoading = false;
+      document.getElementById('sendButton').disabled = false;
+      saveChatHistory();
+      updateChatHistoryUI();
+      scrollToBottom();
+    }
+
+    function displayMessage(message) {
+      const chatContainer = document.getElementById('chatContainer');
+
+      const messageDiv = document.createElement('div');
+      messageDiv.className = `message ${message.role === 'user' ? 'user' : 'bot'}`;
+
+      const avatar = message.role === 'user' ? 'U' : '🤖';
+
+      const contentDiv = document.createElement('div');
+      contentDiv.className = 'message-content';
+      contentDiv.innerHTML = (message.content || '').replace(/\n/g, '<br>');
+
+      messageDiv.innerHTML = `<div class="message-avatar">${avatar}</div>`;
+      messageDiv.appendChild(contentDiv);
+      chatContainer.appendChild(messageDiv);
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+
+    function addLoadingMessage() {
+      const chatContainer = document.getElementById('chatContainer');
+      const loadingDiv = document.createElement('div');
+      loadingDiv.className = 'message bot loading-message';
+      loadingDiv.innerHTML = `
+        <div class="message-avatar">🤖</div>
+        <div class="message-content">
+          <div class="loading-dots"><span></span><span></span><span></span></div>
+          <span class="loading-text" style="margin-left: 8px;">Initializing...</span>
+        </div>
+      `;
+      chatContainer.appendChild(loadingDiv);
+      scrollToBottom();
+      return loadingDiv;
+    }
+
+    function updateLoadingMessage(loadingElement, stepText) {
+      const loadingTextElement = loadingElement.querySelector('.loading-text');
+      if (loadingTextElement) {
+        loadingTextElement.textContent = stepText;
+      }
+    }
+
+    function formatMessage(content) { return content.replace(/\n/g, '<br>'); }
+    function scrollToBottom() {
+      const chatContainer = document.getElementById('chatContainer');
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+    function loadChatHistory() { updateChatHistoryUI(); }
+    function updateChatHistoryUI() {
+      const chatHistoryEl = document.getElementById('chatHistory');
+      const chats = Object.entries(chatHistory).sort(([,a],[,b]) => new Date(b.timestamp) - new Date(a.timestamp));
+      chatHistoryEl.innerHTML = chats.map(([id, chat]) => `
+        <div class="chat-item ${id === currentChatId ? 'active' : ''}" onclick="loadChat('${id}')">
+          <div class="chat-item-title">${chat.title}</div>
+          <div class="chat-item-preview">${getLastMessage(chat.messages)}</div>
+        </div>
+      `).join('');
+    }
+    function getLastMessage(messages) {
+      if (messages.length === 0) return 'No messages';
+      const lastMsg = messages[messages.length - 1];
+      const content = lastMsg.content.substring(0, 50);
+      return content + (lastMsg.content.length > 50 ? '...' : '');
+    }
+    function loadChat(chatId) {
+      if (chatId === currentChatId) return;
+      currentChatId = chatId;
+      messageHistory = [...chatHistory[chatId].messages];
+      clearChat();
+      if (messageHistory.length === 0) showEmptyState();
+      else messageHistory.forEach(message => displayMessage(message));
+      updateChatHistoryUI();
+      scrollToBottom();
+    }
+    function saveChatHistory() { localStorage.setItem('spaceAI_chats', JSON.stringify(chatHistory)); }
+  </script>
+</body>
+</html>

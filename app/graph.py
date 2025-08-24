@@ -13,7 +13,7 @@ from .config import settings
 os.environ["GOOGLE_API_KEY"] = settings.google_api_key
 # Initialize the Gemini LLM for the graph nodes
 llm = ChatGoogleGenerativeAI(
-    model="gemini-1.5-flash-latest", 
+    model="gemini-2.5-flash", 
     temperature=0, 
     api_key=settings.google_api_key
 )

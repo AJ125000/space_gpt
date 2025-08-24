@@ -19,7 +19,7 @@ def get_web_search_tool():
     # Initialize the Serper API wrapper with the API key from config
     search = GoogleSerperAPIWrapper(
         serper_api_key=settings.serper_api_key,
-        k=3,  # Set number of results to 3
+        k=1,  # Set number of results to 3
     )
 
     def _extract_with_trafilatura(url: str) -> str:

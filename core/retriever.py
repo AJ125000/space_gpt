@@ -43,7 +43,7 @@ class KnowledgeBase:
             print("Warning: No local summary index found. Summarization may be limited.")
             self._summary_index = SummaryIndex.from_documents([])
 
-        self._kb_retriever = self._vector_index.as_retriever(similarity_top_k=5)
+        self._kb_retriever = self._vector_index.as_retriever(similarity_top_k=2)
         self._summary_engine = self._summary_index.as_query_engine(
             response_mode="tree_summarize", use_async=True
         )

@@ -11,11 +11,13 @@ class Settings(BaseSettings):
 
     # --- API Keys & Secrets (Loaded from environment) ---
     google_api_key: str
-    langchain_api_key: str
+    langsmith_api_key: str
     qdrant_url: str
     qdrant_api_key: str
-    langchain_tracing_v2: bool = True
+    langsmith_tracing_v2: str
     serper_api_key: str
+    langsmith_endpoint: str
+    langsmith_project: str
     
     # --- Local Storage Paths (for non-vector data) ---
     # The summary index is stored locally as it's not part of the vector DB.
