@@ -1,0 +1,99 @@
+{"id": 2, "question": "How does Milankovitch Climate Temperature influence modern astronomy?", "answer": "It provides baseline orbital‑climate models that astronomers use when comparing Earth to exoplanets and interpreting paleoclimate data."}
+{"id": 3, "question": "Why is Milankovitch Climate Temperature important to scientific research?", "answer": "Because it links orbital mechanics to climate change, helping predict future trends and decode geological and ice‑core records."}
+{"id": 4, "question": "What is the Great Red Spot on Jupiter?", "answer": "A giant, long‑lived anticyclonic storm in Jupiter’s atmosphere, larger than Earth and observed for over three centuries."}
+{"id": 5, "question": "How does the Great Red Spot on Jupiter influence modern astronomy?", "answer": "It serves as a laboratory for studying turbulent vortex dynamics and atmospheric physics on gas‑giant planets."}
+{"id": 6, "question": "Why is the Great Red Spot on Jupiter important to scientific research?", "answer": "Understanding its persistence helps refine models of planetary weather systems and exoplanet atmospheric circulation."}
+{"id": 7, "question": "What are Starship payload advancements in fuel technology?", "answer": "They include cryogenic methane‑oxygen sub‑cooling, in‑orbit refueling and rapid propellant transfer that enable 100‑ton class payloads."}
+{"id": 8, "question": "How do Starship payload advancements in fuel technology influence modern astronomy?", "answer": "By lowering launch costs and boosting lift capacity, they make larger space telescopes and deep‑space probes financially feasible."}
+{"id": 9, "question": "Why are Starship payload advancements in fuel technology important to scientific research?", "answer": "They broaden mission envelopes, allowing heavier scientific instruments and sample‑return hardware previously cost‑prohibitive."}
+{"id": 10, "question": "What discoveries, revelations, and missions have shaped our understanding of Mars?", "answer": "Ancient river deltas, organic compounds and subsurface ice revealed by rovers and orbiters have revolutionized our picture of Mars."}
+{"id": 11, "question": "How do discoveries, revelations, and missions to Mars influence modern astronomy?", "answer": "Such findings refine models of planetary habitability and guide the search for life‑bearing exoplanets."}
+{"id": 12, "question": "Why are discoveries, revelations, and missions to Mars important to scientific research?", "answer": "They address questions about past life, climate evolution and prepare the groundwork for human exploration."}
+{"id": 13, "question": "What is archaeoastronomy?", "answer": "The study of how ancient cultures observed and used celestial phenomena, inferred from archaeological sites and artifacts."}
+{"id": 14, "question": "How does archaeoastronomy influence modern astronomy?", "answer": "It provides historical datasets and highlights astronomy’s cultural significance, informing outreach and comparative studies."}
+{"id": 15, "question": "Why is archaeoastronomy important to scientific research?", "answer": "It illuminates prehistoric calendars, navigation techniques and the evolution of observational astronomy."}
+{"id": 16, "question": "What are fast radio bursts and radiowaves?", "answer": "Fast radio bursts are millisecond‑duration extragalactic pulses; radiowaves are EM waves below ~300 GHz used in radio astronomy."}
+{"id": 17, "question": "How do fast radio bursts and radiowaves influence modern astronomy?", "answer": "FRBs probe intergalactic plasma and cosmic magnetism; radio waves reveal cold gas, pulsars and the cosmic microwave background."}
+{"id": 18, "question": "Why are fast radio bursts and radiowaves important to scientific research?", "answer": "They allow precision timing tests of physics and mapping of otherwise invisible matter."}
+{"id": 19, "question": "What evidence supports the possibility of extraterrestrial life?", "answer": "Organic molecules on comets, extremophiles on Earth and habitable‑zone exoplanets all hint at life’s potential beyond Earth."}
+{"id": 20, "question": "How does the search for extraterrestrial life influence modern astronomy?", "answer": "It drives telescope design and missions such as JWST and Europa Clipper focused on biosignature detection."}
+{"id": 21, "question": "Why is the search for extraterrestrial life important to scientific research?", "answer": "Finding life elsewhere would redefine biology and our place in the Universe."}
+{"id": 22, "question": "What are the main challenges of Mars colonization?", "answer": "Radiation, low gravity, life‑support closure, resource utilization and psychological isolation are key hurdles."}
+{"id": 23, "question": "How does the prospect of Mars colonization influence modern astronomy?", "answer": "It accelerates development of propulsion and life‑support technologies applicable throughout the solar system."}
+{"id": 24, "question": "Why is Mars colonization important to scientific research?", "answer": "A sustained presence would enable extensive geology and biology experiments and serve as a stepping stone for deeper exploration."}
+{"id": 25, "question": "What is the Double Asteroid Redirection Test (DART)?", "answer": "A NASA mission that impacted Dimorphos to test kinetic deflection of hazardous asteroids."}
+{"id": 26, "question": "How does DART influence modern astronomy?", "answer": "It provides real‑world data on momentum transfer efficiency for planetary defense models."}
+{"id": 27, "question": "Why is DART important to scientific research?", "answer": "It validates methods critical to protecting Earth from potential asteroid impacts."}
+{"id": 28, "question": "What causes Neptune’s orbital deviations in the solar system?", "answer": "Gravitational perturbations and historical searches once hinted at additional planets, leading to Pluto’s discovery."}
+{"id": 29, "question": "How do Neptune’s orbital deviations influence modern astronomy?", "answer": "They motivate searches for distant planets and improve orbital dynamics models."}
+{"id": 30, "question": "Why are Neptune’s orbital deviations important to scientific research?", "answer": "They constrain the solar system’s mass distribution and trans‑Neptunian population."}
+{"id": 31, "question": "What roles have animals played as astronauts?", "answer": "Animals tested life‑support systems and microgravity effects before human spaceflight commenced."}
+{"id": 32, "question": "How do animal astronauts influence modern astronomy?", "answer": "They yielded biomedical data critical for designing safe human missions."}
+{"id": 33, "question": "Why are animal astronauts important to scientific research?", "answer": "They established baselines for radiation tolerance and physiological adaptation in space."}
+{"id": 34, "question": "What simulations drive Starship propulsion development?", "answer": "CFD of Raptor engines, tank slosh models and trajectory optimizations inform Starship design."}
+{"id": 35, "question": "How do Starship propulsion simulations influence modern astronomy?", "answer": "Reliable heavy‑lift vehicles can deploy next‑generation observatories and planetary missions."}
+{"id": 36, "question": "Why are Starship propulsion simulations important to scientific research?", "answer": "Accurate simulations cut risk and cost, accelerating scientific access to space."}
+{"id": 37, "question": "What advances are being made in manufacturing fiber‑optics in space?", "answer": "Microgravity production yields ultra‑low‑loss ZBLAN fibers and novel photonic crystals."}
+{"id": 38, "question": "How does manufacturing fiber‑optics in space influence modern astronomy?", "answer": "Such fibers enhance deep‑space communications and telescope instrumentation."}
+{"id": 39, "question": "Why is manufacturing fiber‑optics in space important to scientific research?", "answer": "They produce materials unattainable on Earth, advancing telecom and sensing research."}
+{"id": 40, "question": "What causes Mercury’s orbital eccentricity abnormality?", "answer": "Resonances with Jupiter, solar oblateness and relativity cause Mercury’s high eccentricity and perihelion precession."}
+{"id": 41, "question": "How does Mercury’s orbital eccentricity abnormality influence modern astronomy?", "answer": "Mercury’s orbit provided a key test confirming general relativity."}
+{"id": 42, "question": "Why is Mercury’s orbital eccentricity abnormality important to scientific research?", "answer": "Modeling it refines planetary ephemerides and gravitational theories."}
+{"id": 43, "question": "What was the Chandrayaan‑3 lunar injection maneuver?", "answer": "A precisely timed burn that placed ISRO’s Chandrayaan‑3 on course for the Moon in July 2023."}
+{"id": 44, "question": "How does the Chandrayaan‑3 lunar injection influence modern astronomy?", "answer": "It showcases accurate navigation essential for future lunar science payloads."}
+{"id": 45, "question": "Why is the Chandrayaan‑3 lunar injection important to scientific research?", "answer": "It demonstrates soft‑landing capability for exploring the Moon’s south pole."}
+{"id": 46, "question": "What triggers a supernova in stellar evolution?", "answer": "Core collapse of massive stars or thermonuclear runaway in accreting white dwarfs."}
+{"id": 47, "question": "How do supernovae influence modern astronomy?", "answer": "They enrich galaxies with heavy elements and act as cosmological distance indicators."}
+{"id": 48, "question": "Why are supernovae important to scientific research?", "answer": "Studying them informs nucleosynthesis and dark‑energy measurements."}
+{"id": 49, "question": "What makes Venus an atmospheric “twin” to Earth?", "answer": "Venus has Earth‑like size and mass but a dense CO₂ atmosphere with runaway greenhouse effects."}
+{"id": 50, "question": "How does Venus’s atmosphere influence modern astronomy?", "answer": "It illustrates extremes of greenhouse warming relevant to exoplanet climates."}
+{"id": 51, "question": "Why is Venus’s atmosphere important to scientific research?", "answer": "Deciphering its evolution informs habitability thresholds for terrestrial planets."}
+{"id": 52, "question": "What is the Big Bang theory?", "answer": "The Universe began 13.8 billion years ago from a hot, dense state and has been expanding ever since."}
+{"id": 53, "question": "How does Big Bang research influence modern astronomy?", "answer": "It directs observations of cosmic background radiation and large‑scale structure to test fundamental physics."}
+{"id": 54, "question": "Why is Big Bang research important to scientific inquiry?", "answer": "It tackles questions about the Universe’s origin, evolution and fate."}
+{"id": 55, "question": "What techniques measure vast distances in space?", "answer": "Parallax, Cepheid variables, supernovae and redshift‑based Hubble law build the cosmic distance ladder."}
+{"id": 56, "question": "How do distance‑measuring techniques influence modern astronomy?", "answer": "They underpin accurate scaling of the Universe and calibrate astrophysical quantities."}
+{"id": 57, "question": "Why are distance‑measuring techniques important to scientific research?", "answer": "Precise distances improve luminosity, mass and cosmological parameter estimates."}
+{"id": 58, "question": "What is Agnikul Cosmos’s contribution to India’s space sector?", "answer": "Agnibaan, a 3D‑printed small‑sat launcher, provides flexible, indigenous access to LEO."}
+{"id": 59, "question": "How does Agnikul Cosmos influence modern astronomy?", "answer": "It reduces cost barriers for small astronomical payloads and constellations."}
+{"id": 60, "question": "Why is Agnikul Cosmos important to scientific research?", "answer": "Domestic launch capability promotes responsive space access for researchers."}
+{"id": 61, "question": "What is the Laser Interferometer Space Antenna (LISA) mission?", "answer": "Three spacecraft 2.5 million km apart will detect low‑frequency gravitational waves from space."}
+{"id": 62, "question": "How does the LISA mission influence modern astronomy?", "answer": "It will observe mergers of supermassive black holes and test gravity."}
+{"id": 63, "question": "Why is the LISA mission important to scientific research?", "answer": "It opens a new gravitational‑wave window, probing galaxy evolution and relativity."}
+{"id": 64, "question": "What mysteries surround dark matter and dark energy?", "answer": "Their composition and the reason dark energy density is small are unsolved."}
+{"id": 65, "question": "How does dark matter research influence modern astronomy?", "answer": "Dark matter shapes galaxy formation and cosmic web structure."}
+{"id": 66, "question": "Why is dark matter research important to scientific inquiry?", "answer": "Solving it demands physics beyond the Standard Model."}
+{"id": 67, "question": "What are Trojan asteroids in planetary orbits?", "answer": "Trojan asteroids share planets’ orbits at L4/L5 Lagrange points."}
+{"id": 68, "question": "How do Trojan asteroids influence modern astronomy?", "answer": "They preserve primordial material and inform migration history."}
+{"id": 69, "question": "Why are Trojan asteroids important to scientific research?", "answer": "Sampling them could reveal early solar‑system building blocks."}
+{"id": 70, "question": "What advances have been made in exoplanet detection?", "answer": "Transit, radial‑velocity precision and direct imaging techniques have advanced rapidly."}
+{"id": 71, "question": "How does exoplanet detection influence modern astronomy?", "answer": "They reveal planetary system diversity and guide habitability studies."}
+{"id": 72, "question": "Why is exoplanet detection important to scientific research?", "answer": "Discovering Earth‑like worlds addresses questions about life’s prevalence."}
+{"id": 73, "question": "What is the Kuiper Belt in our solar system?", "answer": "A belt of icy bodies beyond Neptune including Pluto and Arrokoth."}
+{"id": 74, "question": "How does the Kuiper Belt influence modern astronomy?", "answer": "It records clues to planetary migration and primordial chemistry."}
+{"id": 75, "question": "Why is the Kuiper Belt important to scientific research?", "answer": "Studying it tests models of accretion and collisional evolution."}
+{"id": 76, "question": "What is gravitational lensing in astrophysics?", "answer": "The bending of light by mass, creating magnified or distorted images."}
+{"id": 77, "question": "How does gravitational lensing influence modern astronomy?", "answer": "It maps dark matter and uncovers distant galaxies."}
+{"id": 78, "question": "Why is gravitational lensing important to scientific research?", "answer": "Strong lensing acts as a natural telescope; weak lensing constrains cosmology."}
+{"id": 79, "question": "What factors drive space‑based solar‑power initiatives?", "answer": "Continuous sunlight, decarbonization goals and wireless power drive SBSP projects."}
+{"id": 80, "question": "How do space‑based solar‑power initiatives influence modern astronomy?", "answer": "They share infrastructure and techniques useful for large astronomical structures."}
+{"id": 81, "question": "Why are space‑based solar‑power initiatives important to scientific research?", "answer": "Demonstrating gigawatt beaming could power future space habitats and observatories."}
+{"id": 82, "question": "What is the James Webb Space Telescope’s mission scope?", "answer": "A 6.5‑m infrared telescope at L2 observing first galaxies and exoplanets."}
+{"id": 83, "question": "How does the James Webb Space Telescope influence modern astronomy?", "answer": "It provides unprecedented IR sensitivity, transforming many subfields."}
+{"id": 84, "question": "Why is the James Webb Space Telescope important to scientific research?", "answer": "JWST data refine cosmology, stellar physics and planetary science."}
+{"id": 85, "question": "What challenges face lunar polar exploration?", "answer": "Extreme cold, shadowed craters, terrain hazards and comms challenges complicate polar missions."}
+{"id": 86, "question": "How does lunar polar exploration influence modern astronomy?", "answer": "Water‑ice access supports future lunar observatories and human outposts."}
+{"id": 87, "question": "Why is lunar polar exploration important to scientific research?", "answer": "Ice deposits reveal the history of solar‑system volatile delivery."}
+{"id": 88, "question": "What insights come from studying cosmic microwave background radiation?", "answer": "Temperature anisotropies reveal the Universe’s age, geometry and composition."}
+{"id": 89, "question": "How does cosmic microwave background research influence modern astronomy?", "answer": "It tests inflationary theories and neutrino mass constraints."}
+{"id": 90, "question": "Why is cosmic microwave background research important to scientific inquiry?", "answer": "CMB is the earliest observable snapshot, anchoring cosmology."}
+{"id": 91, "question": "What advances have been made in asteroid mining technology?", "answer": "Autonomous prospecting probes, excavation robots and ISRU reactors lead the field."}
+{"id": 92, "question": "How does asteroid mining technology influence modern astronomy?", "answer": "Resource utilization lowers mission costs and enables large instruments."}
+{"id": 93, "question": "Why is asteroid mining technology important to scientific research?", "answer": "It can supply water and metals for life‑support and propulsion."}
+{"id": 94, "question": "What role do solar sails play in deep‑space missions?", "answer": "Solar sails use photon pressure for propulsion without propellant."}
+{"id": 95, "question": "How do solar sails influence modern astronomy?", "answer": "They offer low‑cost voyages to outer solar system and interstellar space."}
+{"id": 96, "question": "Why are solar sails important to scientific research?", "answer": "They enable cubesat missions and ambitious concepts like Breakthrough Starshot."}
+{"id": 97, "question": "What is quantum communication via satellite networks?", "answer": "Satellites distribute entangled photon keys for global quantum‑secure links."}
+{"id": 98, "question": "How does quantum satellite communication influence modern astronomy?", "answer": "They drive low‑noise detector and entangled‑photon advances useful in physics experiments."}
+{"id": 99, "question": "Why is quantum satellite communication important to scientific research?", "answer": "They underpin future secure comms infrastructure and test quantum mechanics over vast distances."}
+{"id": 100, "question": "What ethical considerations arise in commercial space tourism?", "answer": "Environmental impact, passenger safety, debris mitigation and equitable access are key issues."}

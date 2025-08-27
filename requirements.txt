@@ -35,3 +35,8 @@ qdrant-client[fastembed]>=1.14.2      # grpcio≥1.74 already handled
 # ── Observability / scraping ────────────────────────────────
 langsmith==0.4.14
 trafilatura==1.5.0
+
+# ── Evaluation with RAGAS ──────────────────────────────────
+ragas>=0.1.0
+datasets>=2.0.0
+langchain-openai==0.3.32  # For using OpenAI models in evaluation

@@ -11,6 +11,7 @@ class Settings(BaseSettings):
 
     # --- API Keys & Secrets (Loaded from environment) ---
     google_api_key: str
+    openai_api_key: str  # Added for OpenAI models
     langsmith_api_key: str
     qdrant_url: str
     qdrant_api_key: str
