@@ -1,0 +1,13 @@
+# Ignore local summary index and large data files
+storage/summary_index/
+ingestion/documents/
+__pycache__/
+.venv/
+*.pyc
+*.pyo
+dist/
+build/
+venv/
+env/
+*.log
+.env

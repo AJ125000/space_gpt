@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    image: space_gpt:local
+    container_name: space_gpt_local
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    # Optional: mount the local summary index so the container can read it during development
+    volumes:
+      - ./storage/summary_index:/app/storage/summary_index:ro
