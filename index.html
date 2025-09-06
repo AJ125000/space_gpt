@@ -55,6 +55,20 @@
     .loading-dots span:nth-child(1) { animation-delay: -0.32s; }
     .loading-dots span:nth-child(2) { animation-delay: -0.16s; }
     @keyframes loading { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
+    .streaming-cursor { 
+      color: #10b981; 
+      animation: blink 1s infinite; 
+      font-weight: bold;
+      margin-left: 1px;
+    }
+    @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+    .streaming-message .message-content {
+      position: relative;
+    }
+    .streaming-message {
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
     .input-area { padding: 20px; border-top: 1px solid #303030; background-color: #171717; }
     .input-container { max-width: 800px; margin: 0 auto; position: relative; }
     .message-input {
@@ -265,8 +279,12 @@
           chat_history: toBackendHistory(messageHistory.slice(0, -1))
         };
 
+        // Choose streaming endpoint based on preference
+        // Use token streaming for ChatGPT-style experience
+        const streamingEndpoint = 'http://localhost:8000/chat-stream-tokens';
+
         // Make POST request to streaming endpoint
-        const response = await fetch('http://localhost:8000/chat-stream', {
+        const response = await fetch(streamingEndpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(requestBody)
@@ -279,6 +297,8 @@
         const reader = response.body.getReader();
         const decoder = new TextDecoder();
         let buffer = '';
+        let streamingMessageDiv = null;
+        let accumulatedContent = '';
 
         while (true) {
           const { done, value } = await reader.read();
@@ -297,8 +317,37 @@
                   
                   if (parsed.type === 'step') {
                     updateLoadingMessage(loadingMessage, parsed.step);
+                  } else if (parsed.type === 'streaming_start') {
+                    // Start streaming - remove loading and create streaming message
+                    if (loadingMessage.parentNode) {
+                      loadingMessage.remove();
+                    }
+                    streamingMessageDiv = createStreamingMessage();
+                    accumulatedContent = '';
+                  } else if (parsed.type === 'token') {
+                    // Handle token-by-token streaming
+                    if (streamingMessageDiv) {
+                      accumulatedContent += parsed.content;
+                      updateStreamingMessage(streamingMessageDiv, accumulatedContent);
+                    }
+                  } else if (parsed.type === 'streaming_end') {
+                    // Finalize the streaming message
+                    if (streamingMessageDiv) {
+                      finalizeStreamingMessage(streamingMessageDiv, parsed.answer);
+                      
+                      const assistantMessage = {
+                        role: 'assistant',
+                        content: parsed.answer,
+                        timestamp: new Date().toISOString()
+                      };
+                      messageHistory.push(assistantMessage);
+                      chatHistory[currentChatId].messages.push(assistantMessage);
+                    }
                   } else if (parsed.type === 'answer') {
-                    loadingMessage.remove();
+                    // Fallback for non-streaming responses
+                    if (loadingMessage.parentNode) {
+                      loadingMessage.remove();
+                    }
                     
                     const assistantMessage = {
                       role: 'assistant',
@@ -307,9 +356,16 @@
                     };
                     messageHistory.push(assistantMessage);
                     chatHistory[currentChatId].messages.push(assistantMessage);
-                    displayMessage(assistantMessage);
+                    
+                    if (streamingMessageDiv) {
+                      finalizeStreamingMessage(streamingMessageDiv, parsed.answer);
+                    } else {
+                      displayMessage(assistantMessage);
+                    }
                   } else if (parsed.type === 'error') {
-                    loadingMessage.remove();
+                    if (loadingMessage.parentNode) {
+                      loadingMessage.remove();
+                    }
                     
                     const errorMessage = {
                       role: 'assistant',
@@ -332,7 +388,9 @@
 
       } catch (error) {
         console.error('Error:', error);
-        loadingMessage.remove();
+        if (loadingMessage.parentNode) {
+          loadingMessage.remove();
+        }
         const errorMessage = {
           role: 'assistant',
           content: 'Sorry, I\'m having trouble connecting to the server. Please make sure the backend is running on http://localhost:8000',
@@ -389,6 +447,40 @@
       if (loadingTextElement) {
         loadingTextElement.textContent = stepText;
       }
+    }
+
+    function createStreamingMessage() {
+      const chatContainer = document.getElementById('chatContainer');
+      const messageDiv = document.createElement('div');
+      messageDiv.className = 'message bot streaming-message';
+
+      const contentDiv = document.createElement('div');
+      contentDiv.className = 'message-content';
+      contentDiv.innerHTML = '<span class="streaming-cursor">|</span>';
+
+      messageDiv.innerHTML = '<div class="message-avatar">🤖</div>';
+      messageDiv.appendChild(contentDiv);
+      chatContainer.appendChild(messageDiv);
+      scrollToBottom();
+      
+      return messageDiv;
+    }
+
+    function updateStreamingMessage(messageDiv, content) {
+      const contentDiv = messageDiv.querySelector('.message-content');
+      // Convert newlines to <br> and add the blinking cursor
+      const formattedContent = content.replace(/\n/g, '<br>');
+      contentDiv.innerHTML = formattedContent + '<span class="streaming-cursor">|</span>';
+      scrollToBottom();
+    }
+
+    function finalizeStreamingMessage(messageDiv, finalContent) {
+      const contentDiv = messageDiv.querySelector('.message-content');
+      // Remove the cursor and set final content
+      const formattedContent = finalContent.replace(/\n/g, '<br>');
+      contentDiv.innerHTML = formattedContent;
+      messageDiv.classList.remove('streaming-message');
+      scrollToBottom();
     }
 
     function formatMessage(content) { return content.replace(/\n/g, '<br>'); }
