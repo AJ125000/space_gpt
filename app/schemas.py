@@ -1,6 +1,7 @@
-from typing import List, TypedDict
+from typing import List, TypedDict, Annotated
 from langchain_core.messages import BaseMessage
 from pydantic import BaseModel, Field
+from langgraph.graph.message import add_messages
 
 # --- API Schemas ---
 class ChatRequest(BaseModel):
@@ -15,8 +16,8 @@ class GraphState(TypedDict):
     """
     Represents the state of our graph.
     """
+    messages: Annotated[List[BaseMessage], add_messages]  # Chat history with add reduction
     original_query: str
-    chat_history: List[BaseMessage]
     rag_query: str
     search_query: str
     is_out_of_scope: bool
@@ -24,4 +25,3 @@ class GraphState(TypedDict):
     search_results: str
     filtered_context: str
     final_answer: str
-    _session_id: str  # Optional session ID for step tracking

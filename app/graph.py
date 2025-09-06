@@ -1,7 +1,9 @@
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.pydantic_v1 import BaseModel, Field
 from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_core.messages import HumanMessage, AIMessage
 from langgraph.graph import StateGraph, END
+from langgraph.checkpoint.memory import MemorySaver
 import asyncio
 import os
 
@@ -37,7 +39,19 @@ def plan_node(state: GraphState):
          User Query: {query}"""
     )
     chain = prompt | llm.with_structured_output(Plan)
-    result = chain.invoke({"chat_history": state["chat_history"], "query": state["original_query"]})
+    
+    # Format chat history from messages
+    chat_history_str = ""
+    if state.get("messages"):
+        chat_history_str = "\n".join([
+            f"{'User' if isinstance(msg, HumanMessage) else 'Assistant'}: {msg.content}" 
+            for msg in state["messages"][:-1]  # Exclude the current message
+        ])
+    
+    result = chain.invoke({
+        "chat_history": chat_history_str, 
+        "query": state["original_query"]
+    })
     return {"rag_query": result.rag_query, "search_query": result.search_query, "is_out_of_scope": result.is_out_of_scope}
 
 async def retrieve_and_search_node(state: GraphState):
@@ -76,13 +90,29 @@ def writer_node(state: GraphState):
     prompt = ChatPromptTemplate.from_template(
         """You are a final answer synthesizer. Craft a comprehensive, well-structured answer using the provided 'Filtered Context'.
          If the context is empty, inform the user you couldn't find relevant information.
+         Include chat history context if relevant to provide a conversational flow.
 
+         Chat History: {chat_history}
          User's Original Query: {original_query}
          Filtered Context: {filtered_context}"""
     )
     chain = prompt | llm
-    result = chain.invoke({"original_query": state["original_query"], "filtered_context": state["filtered_context"]})
+    
+    # Format chat history for the prompt
+    chat_history_str = ""
+    if state.get("messages"):
+        chat_history_str = "\n".join([
+            f"{'User' if isinstance(msg, HumanMessage) else 'Assistant'}: {msg.content}" 
+            for msg in state["messages"][-5:]  # Include last 5 messages for context
+        ])
+    
+    result = chain.invoke({
+        "original_query": state["original_query"], 
+        "filtered_context": state["filtered_context"],
+        "chat_history": chat_history_str
+    })
     return {"final_answer": result.content}
+
 
 def out_of_scope_node(state: GraphState):
     print("---HANDLING OUT OF SCOPE---")
@@ -123,6 +153,17 @@ def create_graph():
     workflow.add_edge("writer", END)
     workflow.add_edge("out_of_scope", END)
     
-    return workflow.compile()
+    # Create memory saver for checkpointing (enables streaming with state persistence)
+    memory = MemorySaver()
+    
+    return workflow.compile(checkpointer=memory)
 
+# Create both streaming and non-streaming versions
 graph_app = create_graph()
+
+# Function to handle streaming with LangGraph
+def create_streaming_graph():
+    """Create a graph optimized for streaming responses"""
+    return create_graph()
+
+streaming_graph_app = create_streaming_graph()
