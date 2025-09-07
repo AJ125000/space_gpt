@@ -1,4 +1,3 @@
-### Multi-stage build: build dependencies in a builder image, copy runtime files into smaller final image
 FROM python:3.11-slim AS builder
 
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -12,7 +11,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
     curl \
     ca-certificates \
- && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements and install into a location we can copy to the final image
 COPY requirements.txt /app/requirements.txt
